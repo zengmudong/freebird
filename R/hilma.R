@@ -144,11 +144,16 @@ hilma <- function(Y, G, S, mediation_setting = 'incomplete', tuning_method = 'un
     p_beta = 2*(1-pnorm(abs(teststat_beta)))
     p_alpha1 = 2*(1-pnorm(abs(teststat_alpha1)))
 
+   
     infer_out = list()
     infer_out$beta_hat = beta_hat
     infer_out$alpha1_hat = alpha1_hat
+    infer_out$sigma_beta_hat = sigma_beta_hat
+    infer_out$sigma_alpha1_hat = sigma_alpha1_hat
+    infer_out$teststat_beta = teststat_beta
+    infer_out$teststat_alpha1 = teststat_alpha1
     infer_out$pvalue_beta_hat = p_beta
-    #infer_out$pvalue_alpha1_hat = p_alpha1
+    infer_out$pvalue_alpha1_hat = p_alpha1
 
 
 
